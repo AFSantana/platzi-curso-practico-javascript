@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +7,45 @@
     <title>Porcentajes y descuentos | Curso Platzi</title>
 </head>
 <body>
-    <h1>Porcentajes y descuentos</h1>
     <header>
-        <p>
-            Este es el segundo taller del Curso Práctico de JavaScript.
-        </p>
+        <h1>Tienda GaminG</h1>
+        <h3>Calcular descuentos</h3>
     </header>
-
+    
+        <img src="./img/SalaGaming.jpg" alt="Sala gaming" width="400" />
+        <figcaption><strong>Personaliza tu setup gaming</strong></figcaption>
+    
     <section>
-        <h2>
-            Calcula el precio a pagar de tus productos con descuento.
-        </h2>
+        <h3>
+            Calcula el precio a pagar con descuento.
+        </h3>
         <form>
-            <label for="InputPrice">Escribe el precio de tu producto</label>
-            <input id="InputPrice" type="number" />
+            <label for="InputPrice">Precio original del producto</label>
+            <input id="InputPrice" type="number" /><br />
 
-            <label for="InputDiscount">Escribe el descuento de tu producto</label>
-            <input id="InputDiscount" type="number" />
+            <label for="InputDiscount">Porcentaje de descuento inicial</label>
+            <input id="InputDiscount" type="number" /><br />
 
-            <button type="button" onclick="onClickButtonPriceDiscount()">
-                Calcular el precio con descuento.
-            </button>
+            <label for="InputVoucher">Ingrese su cupón de descuento(opcional)</label>
+            <input id="InputVoucher" type="text" />
+
+            <p><strong>El cupón se calcula sobre el precio con descuento inicial.</strong></p>
 
             <p id="ResultP"></p>
+
+            <button type="button" onclick="onClickButtonPriceDiscount()">
+                Calcular total.
+            </button>
+        </form>
+        <form>
+            <p>Los siguientes son los códigos de descuento vigentes:</p>
+            <ul>
+                <li>S117MC = 25%</li>
+                <li>B312N6 = 20%</li>
+                <li>A239N4 = 15%</li>
+                <li>A259N1 = 10%</li>
+                <li>M343GS = 5%</li>
+            </ul>
         </form>
     </section>
     <script src="./descuentos.js"></script>
